@@ -5,6 +5,7 @@ import { Button } from "./components/Button"
 import { Tip } from "./components/Tip"
 import { Letter } from "./components/Letter"
 import { Input } from "./components/Input"
+import { LettersUsed } from "./components/LettersUsed"
 
 export function App() {
   function handleRestartGame() {
@@ -31,6 +32,8 @@ export function App() {
           <Input />
           <Button title="Confirmar" />
         </div>
+
+        <LettersUsed />
       </main>
     </div>
   )
