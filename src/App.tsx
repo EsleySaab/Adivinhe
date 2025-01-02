@@ -19,6 +19,19 @@ export function App() {
     alert("Reiniciar o jogo")
   }
 
+  function handleConfirm() {
+    if (!challenge) {
+      return
+    }
+
+    if (!letter.trim()) {
+      return alert("Digite uma letra!")
+    }
+
+    const value = letter.toUpperCase()
+    const exists = lettersUsed.find((used) => used.value === value)
+  }
+
   function startGame() {
     const index = Math.floor(Math.random() * WORDS.length)
     const randomWord = WORDS[index]
@@ -51,8 +64,13 @@ export function App() {
         <h4>Palpite</h4>
 
         <div className={styles.guess}>
-          <Input />
-          <Button title="Confirmar" />
+          <Input
+            autoFocus
+            maxLength={1}
+            placeholder="?"
+            onChange={(e) => setLetter(e.target.value)}
+          />
+          <Button title="Confirmar" onClick={handleConfirm} />
         </div>
 
         <LettersUsed data={lettersUsed} />

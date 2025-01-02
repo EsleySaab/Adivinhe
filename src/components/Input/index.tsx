@@ -1,6 +1,9 @@
 import styles from "./styles.module.css"
+import { InputHTMLAttributes } from "react"
 
-export function Input() {
+type InputProps = InputHTMLAttributes<HTMLInputElement>
+
+export function Input({ ...props }: InputProps) {
   return (
     <input
       type="text"
@@ -8,6 +11,7 @@ export function Input() {
       maxLength={1}
       placeholder="?"
       className={styles.input}
+      {...props}
     />
   )
 }
