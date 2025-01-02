@@ -1,50 +1,24 @@
-# React + TypeScript + Vite
+🧩 Adivinhe
+Este projeto foi desenvolvido durante a trilha Full-Stack da Rocketseat. Ele simula um jogo de adivinhação, onde o usuário deve descobrir palavras com base em dicas fornecidas e um número limitado de tentativas. Foi construído utilizando React e TypeScript, aplicando conceitos modernos de desenvolvimento front-end.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Tecnologias Usadas
+React: Biblioteca JavaScript para construção de interfaces de usuário reativas.
+TypeScript: Superconjunto de JavaScript que adiciona tipagem estática ao código.
+CSS Modules: Para aplicação de estilos locais e manutenção do isolamento dos estilos.
 
-Currently, two official plugins are available:
+⚙️ Funcionalidades
+Adivinhar palavras com base em dicas fornecidas.
+Controle de número de tentativas disponíveis.
+Feedback imediato sobre as tentativas corretas e erradas.
+Palavras com diferentes níveis de dificuldade para desafiar o jogador.
+Histórico do jogo, mostrando palavras já adivinhadas ou não.
+Totalmente responsivo para uso em dispositivos móveis e desktops.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🎯 Objetivos
+Consolidar o uso de React com TypeScript.
+Praticar o gerenciamento de estado e eventos no React.
+Trabalhar com componentização e reutilização de código.
+Aprimorar a lógica de jogo utilizando arrays e condicionais.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+🖼 Layout do Projeto
+![Layout do projeto](./src//assets//layout.png)
