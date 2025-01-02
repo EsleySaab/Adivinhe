@@ -10,6 +10,7 @@ import { Input } from "./components/Input"
 import { LettersUsed, LettersUsedProps } from "./components/LettersUsed"
 
 export function App() {
+  const [score, setScore] = useState(0)
   const [letter, setLetter] = useState("")
   const [attempts, setAttempts] = useState(0)
   const [lettersUsed, setLettersUsed] = useState<LettersUsedProps[]>([])
@@ -29,7 +30,27 @@ export function App() {
     }
 
     const value = letter.toUpperCase()
-    const exists = lettersUsed.find((used) => used.value === value)
+    const exists = lettersUsed.find(
+      (used) => used.value.toUpperCase() === value
+    )
+
+    if (exists) {
+      return alert("Você já utilizou a letra " + value)
+    }
+
+    const hits = challenge.word
+      .toUpperCase()
+      .split("")
+      .filter((char) => char === value).length
+
+    const correct = hits > 0
+
+    const currentScore = score + hits
+
+    setLettersUsed((prevState) => [...prevState, { value, correct }])
+    setScore(currentScore)
+
+    setLetter("")
   }
 
   function startGame() {
@@ -54,7 +75,7 @@ export function App() {
       <main>
         <Header current={attempts} max={10} onRestart={handleRestartGame} />
 
-        <Tip tip="Uma das linguagens de programação mais utilizadas" />
+        <Tip tip={challenge.tip} />
         <div className={styles.word}>
           {challenge.word.split("").map(() => (
             <Letter value="" />
@@ -68,6 +89,7 @@ export function App() {
             autoFocus
             maxLength={1}
             placeholder="?"
+            value={letter}
             onChange={(e) => setLetter(e.target.value)}
           />
           <Button title="Confirmar" onClick={handleConfirm} />
