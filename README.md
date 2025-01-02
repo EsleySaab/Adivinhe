@@ -1,6 +1,6 @@
 # **🧩 Adivinhe**
 
-## Este projeto foi desenvolvido durante a trilha **Full-Stack** da **Rocketseat**. Ele simula um **jogo de adivinhação**, onde o usuário deve descobrir palavras com base em dicas fornecidas e um número limitado de tentativas. Foi construído utilizando **React** e **TypeScript**, aplicando conceitos modernos de desenvolvimento front-end. A aplicação é totalmente **responsiva**.
+## Este projeto foi desenvolvido durante a trilha **Full-Stack** da **Rocketseat**. Ele simula um **jogo de adivinhação**, onde o usuário deve descobrir palavras com base em dicas fornecidas e um número limitado de tentativas.
 
 ## 🚀 **Tecnologias Usadas**
 
@@ -13,7 +13,7 @@
 
 ## ⚙️ **Funcionalidades**
 
-- **Adivinhar palavras**: advinhe palavras com base em dicas fornecidas
+- **Adivinhar palavras**: advinhe palavras com base em dicas fornecidas.
 - **Controle**: o usuário pode ver o número de tentativas disponíveis.
 - **Feedback**: tenha o retorno imediato sobre as tentativas corretas e erradas.
 - **Responsividade completa**: Layout ajustado para diferentes tamanhos de tela.
@@ -22,9 +22,9 @@
 
 ## 🎯 **Objetivos**
 
-- Praticar o uso de **estados** no React.
-- Praticar o gerenciamento de **estado** e **eventos** no **React**
-- Trabalhar com **componentização** e reutilização de código.
+- Praticar o uso de **estados** no **React**.
+- Praticar o gerenciamento de **estado** e **eventos** no **React**.
+- Trabalhar com **componentização** e **reutilização de código**.
 - Aprimorar a lógica de jogo utilizando **arrays** e **condicionais**.
 
 ---
